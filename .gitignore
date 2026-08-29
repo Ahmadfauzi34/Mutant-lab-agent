@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.env
+.DS_Store
+
+# Mutant Lab working material stays local unless explicitly promoted.
+lab/incubator/*
+!lab/incubator/README.md
+lab/training/generated/
+lab/training/local/
+lab/sandboxes/experimental/
+
+# Trained brains are exported artifacts, not normal source commits.
+brains/*.db
+brains/*.sqlite3
+brains/*.agentckpt
+
+# Development checkpoint/release artifacts live outside the product tree.
+*.zip
+*.tar
+*.tar.gz
+audit/
+checkpoints/

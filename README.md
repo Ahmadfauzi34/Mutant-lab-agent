@@ -1,1 +1,56 @@
-# Mutant-lab-agent
+# Mutant Lab Agent
+
+Mutant Lab Agent is a clean laboratory/runtime repository for building and training portable cognitive agents from one shared architecture.
+
+The repository intentionally keeps the product surface small:
+
+- `agen_lab/` — canonical cognitive runtime.
+- `core/` — compatibility shim required by the runtime.
+- `lab/` — lightweight incubation, sandbox, and training workspace contracts.
+- `brains/` — exported/seed cognitive-state placement convention; trained `.db` files are not committed by default.
+- `tests/` — small product smoke tests.
+- `docs/` — user-facing concepts and packaging guidance.
+
+Development checkpoints, long audit trails, generated datasets, active mutants, and training logs stay outside the product repository. A checkpoint ZIP is the development-continuity artifact; this repository is the clean promoted result.
+
+## Current seed runtime
+
+- Semantic runtime: **V2.42**
+- Lineage: Canonical R1
+- Promotion validation before this repository seed: **1201 / 1201 PASS**
+
+## Core idea
+
+```text
+clean shared runtime
+       +
+portable brain.db
+       =
+usable agent
+```
+
+Training normally mutates cognitive state, not the canonical runtime. Experimental architecture changes belong in an isolated incubator and must pass the standard sandbox/regression boundary before promotion.
+
+## Quick check
+
+```bash
+python -m unittest tests.test_runtime_smoke -v
+```
+
+## Lab workflow
+
+```text
+Seed runtime
+   ↓ spawn
+Incubator mutant
+   ↓ train in controlled data/sandboxes
+Evaluate
+   ↓
+Freeze brain.db
+   ↓
+Export agent capsule
+```
+
+Multi-agent use is optional. Multiple agents can share this runtime while loading different cognitive-state databases.
+
+See `docs/CONCEPTS.md` and `docs/AGENT_PACKAGE.md` for the minimal contracts.

@@ -1,0 +1,16 @@
+{
+  "seed_id": "mutant-lab-seed-g0",
+  "runtime_lineage": "canonical-r1",
+  "semantic_version": "2.42",
+  "status": "FROZEN_PROMOTED",
+  "promotion_validation": {
+    "regression": "813/813 PASS",
+    "focused_integration": "365/365 PASS",
+    "game_e2e_restart": "23/23 PASS",
+    "grand_total": "1201/1201 PASS"
+  },
+  "checkpoint_sha256": "363a6b6320ee0f1a4d213a8b015b2ea7caa6ecfaf5eaf68371556969755190d3",
+  "default_training_mode": "state_mutation",
+  "multi_agent": "optional",
+  "notes": "Product seed manifest only. Full development continuity remains in the checkpoint ZIP, not this repository."
+}
