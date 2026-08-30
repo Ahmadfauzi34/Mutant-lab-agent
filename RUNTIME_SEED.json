@@ -12,5 +12,15 @@
   "checkpoint_sha256": "363a6b6320ee0f1a4d213a8b015b2ea7caa6ecfaf5eaf68371556969755190d3",
   "default_training_mode": "state_mutation",
   "multi_agent": "optional",
-  "notes": "Product seed manifest only. Full development continuity remains in the checkpoint ZIP, not this repository."
+  "notes": "Product seed manifest only. Full development continuity remains in the checkpoint ZIP, not this repository.",
+  "canonical_sandbox": {
+    "source": "Seed G0 checkpoint",
+    "layout": "sandboxes/",
+    "status": "FROZEN_BASELINE",
+    "runner": "run_sandboxes.py",
+    "game_runner": "run_game_e2e.py",
+    "archive_sha256": "f489958f46ecad29db7e1bb45c668678a3859ec191da003005735f46225c4945",
+    "focused_integration": "365/365 PASS",
+    "game_e2e_restart": "23/23 PASS"
+  }
 }

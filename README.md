@@ -54,3 +54,14 @@ Export agent capsule
 Multi-agent use is optional. Multiple agents can share this runtime while loading different cognitive-state databases.
 
 See `docs/CONCEPTS.md` and `docs/AGENT_PACKAGE.md` for the minimal contracts.
+
+## Canonical baseline sandbox
+
+The root `sandboxes/` tree and `run_sandboxes.py` / `run_game_e2e.py` are promoted verbatim from the Seed G0 V2.42 checkpoint. They are a protected behavioral baseline for the canonical architecture, not training data.
+
+```bash
+python run_sandboxes.py
+python run_game_e2e.py
+```
+
+Experimental or domain training sandboxes belong under `lab/sandboxes/`; they do not replace the canonical baseline. A candidate that breaks the root baseline is not promotion-safe even if it performs well on its training curriculum.

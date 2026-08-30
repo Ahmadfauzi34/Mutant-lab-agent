@@ -1,7 +1,7 @@
-# Sandboxes
+# Lab Sandboxes
 
-This directory is the stable home for reusable sandbox definitions.
+The root `/sandboxes/` directory is the frozen canonical baseline copied verbatim from the promoted Seed G0 checkpoint. It is the architecture-authenticity boundary and should not be edited as training material.
 
-Keep standard sandboxes small, deterministic where practical, and explicit about the cognitive invariant or capability they test. Put temporary experiments under `lab/sandboxes/experimental/` (ignored by Git).
+This `lab/sandboxes/` directory is for future domain, experimental, or generated lab sandboxes. Those may evolve during experiments, but they do not silently become canonical and they never replace the root baseline.
 
-Training data and evaluation sandboxes should remain conceptually separate so a mutant is not judged only on material it trained on.
+Training data and evaluation boundaries remain separate.
