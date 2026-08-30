@@ -65,3 +65,15 @@ python run_game_e2e.py
 ```
 
 Experimental or domain training sandboxes belong under `lab/sandboxes/`; they do not replace the canonical baseline. A candidate that breaks the root baseline is not promotion-safe even if it performs well on its training curriculum.
+
+## Minimal local lab
+
+`mutant_lab.py` keeps the active experiment local and small. It verifies the frozen baseline fingerprint before spawning a mutant, creates a portable `brain.db` under the ignored `lab/incubator/` workspace, and can run the canonical baseline inside a temporary directory so sandbox-generated artifacts do not dirty the repository.
+
+```bash
+python mutant_lab.py baseline
+python mutant_lab.py spawn python-specialist --purpose "learn Python domain experience"
+python mutant_lab.py inspect python-specialist
+```
+
+The default 16×16 reference space is only a convenient reference machine for a fresh brain and can be changed with `--width` / `--height`. Architecture mutation is deliberately a separate runtime experiment; this small tool spawns state or knowledge mutants against the frozen Seed G0 runtime.

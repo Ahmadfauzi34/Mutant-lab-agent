@@ -21,6 +21,9 @@
     "game_runner": "run_game_e2e.py",
     "archive_sha256": "f489958f46ecad29db7e1bb45c668678a3859ec191da003005735f46225c4945",
     "focused_integration": "365/365 PASS",
-    "game_e2e_restart": "23/23 PASS"
+    "game_e2e_restart": "23/23 PASS",
+    "file_count": 21,
+    "content_fingerprint_sha256": "01fbb26714b071df5ec763d45a32370eb382c392d41e11ed17d79934ed3005c3",
+    "content_fingerprint_algorithm": "sha256(sorted path + NUL + raw file sha256 digest)"
   }
 }
