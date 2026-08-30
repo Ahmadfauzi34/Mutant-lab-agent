@@ -13,6 +13,8 @@ venv/
 # Mutant Lab working material stays local unless explicitly promoted.
 lab/incubator/*
 !lab/incubator/README.md
+!lab/incubator/assistant-dev/
+!lab/incubator/assistant-dev/**
 lab/training/generated/
 lab/training/local/
 lab/sandboxes/experimental/
