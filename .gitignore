@@ -14,7 +14,7 @@ venv/
 lab/incubator/*
 !lab/incubator/README.md
 !lab/incubator/assistant-dev/
-!lab/incubator/assistant-dev/**
+lab/incubator/assistant-dev/*
 lab/training/generated/
 lab/training/local/
 lab/sandboxes/experimental/
@@ -30,3 +30,6 @@ brains/*.agentckpt
 *.tar.gz
 audit/
 checkpoints/
+
+# One persistent development-assistant state archive, text-encoded for session portability.
+!lab/incubator/assistant-dev/assistant-dev-state.zip.b64
