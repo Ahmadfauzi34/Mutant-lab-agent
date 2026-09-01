@@ -85,6 +85,8 @@ A validator must be independently discriminating from the executor it evaluates.
 
 Different validator names do not automatically mean independent evidence. Check source/provenance lineage; multiple validators that all derive from the same artifact should not be counted as independent roots.
 
+Evidence acquisition should also be progress-aware. If a source lineage has already been consumed for the same claim/context and its declared reuse policy says another read adds no new information, do not keep proposing that lineage while independent validation routes remain. Preserve its history and learned action utility; new context or genuinely new evidence may make reuse relevant again.
+
 A validated tool/action result is not automatically epistemic evidence. If the result should change a proof state, use an explicit evidence-admission path. Do not infer truth merely because an action succeeded.
 
 Validators are code too. Validate important validators with positive and negative controls; prefer semantic/contract checks over brittle formatting/string matches, and avoid hard-coded internal score thresholds unless that threshold is itself part of a validated public contract.
