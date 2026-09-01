@@ -31,6 +31,8 @@ usable agent
 
 Training normally mutates cognitive state, not the canonical runtime. Experimental architecture changes belong in an isolated incubator and must pass the standard sandbox/regression boundary before promotion.
 
+For developer/LLM-assisted training handoff, read [`docs/TRAINING_BASELINE.md`](docs/TRAINING_BASELINE.md) before assigning training credit or defining validators. The baseline is a developer reference, not agent training data or a universal curriculum.
+
 ## Quick check
 
 ```bash
